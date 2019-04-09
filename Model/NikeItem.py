@@ -19,8 +19,8 @@ class NikeItem:
 	def getPostpayLink(self,productId,shoesLink):
 	    url = "https://api.nike.com/merch/products/v2/" + productId
 	    response = requests.get(url).json()
-	    postpayLink = shoesLink + "?LEStyleColor={styleColor}&LEPaymentType=Alipay".format(
-	        styleColor=response["styleColor"])
+	    # print "[StveaSnkrsBot]System>Nike Item"
+	    postpayLink = shoesLink + "?LEStyleColor={styleColor}&LEPaymentType=Alipay".format(styleColor=response["styleColor"])
 	    return postpayLink
 
 	def __init__(self,url,size,price):
